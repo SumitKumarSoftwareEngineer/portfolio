@@ -1,7 +1,6 @@
 # Sumit Kumar - Personal Portfolio
 
-A modern, responsive portfolio website built with React, TypeScript, Tailwind CSS, and Framer Motion. This project was created for practice purposes to showcase my front-end development skills.
-
+A modern, responsive portfolio website built with React, TypeScript, Tailwind CSS, and Framer Motion. It includes smooth animations, interactive project showcases, a contact form, and dark/light mode support.
 ![Portfolio Preview](/public/Girhubprevieww.png)
 
 
