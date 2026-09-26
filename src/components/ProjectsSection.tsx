@@ -3,7 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { ExternalLink, Github, Star, Zap, Link2, Code, Database, Bot, Cpu, Users, MessageSquare } from 'lucide-react';
+import { ExternalLink, Github, Zap, Code, Database, Bot, Users, MessageSquare, ShoppingCart } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 
@@ -35,29 +35,28 @@ const ProjectsSection = () => {
       gradient: "from-red-500 to-purple-600"
     },
     {
-      title: "Hospital Management System",
-      description: "A full-stack web application to manage patients, doctors, and hospital operations with secure authentication and responsive design.",
-      image: "local-uploads/Screenshot 2025-09-12 163128.png",
+      title: "ProShop - E-commerce Web Application",
+      description: "A full-stack MERN e-commerce application where users can browse products, add items to cart, and place orders.",
+      image: "local-uploads/proshop-thumbnail.png",
       features: [
-        "Secure Authentication",
-        "Patient Records & Appointments",
-        "Doctor Profiles & Schedules",
-        "Admin Dashboard",
-        "Responsive Design"
+        "User Authentication (Login / Register)",
+        "Product Listing",
+        "Add to Cart",
+        "Order Management",
+        "Admin Panel (Add / Edit Products)",
+        "Responsive UI"
       ],
-      tech: ["React", "Node.js", "Express.js", "MongoDB Atlas", "Tailwind CSS"],
+      tech: ["React", "Node.js", "Express.js", "MongoDB", "Bootstrap"],
       detailedTech: {
-        frontend: ["React.js", "React Router", "Tailwind CSS", "Lucide Icons", "Axios"],
-        backend: ["Node.js", "Express.js", "JWT", "Mongoose"],
-        database: ["MongoDB Atlas"],
-        tools: ["dotenv"]
+        frontend: ["React.js", "CSS / Bootstrap"],
+        backend: ["Node.js", "Express.js"],
+        database: ["MongoDB"]
       },
       links: {
-       
-        live: "https://hotel-management-system-frontend-lilac.vercel.app/",
-        github: "https://github.com/SumitKumarSoftwareEngineer/Hotel-Management-System-Frontend"
+        live: "https://proshop-ecommerce-5.onrender.com/",
+        github: "https://github.com/SumitKumarSoftwareEngineer/ProShop-Ecommerce"
       },
-      icon: Cpu,
+      icon: ShoppingCart,
       gradient: "from-purple-600 to-pink-500"
     },
     {
@@ -102,7 +101,7 @@ const ProjectsSection = () => {
         tools: ["Git", "Deployment Insights"]
       },
       links: {
-        
+
         github: "https://github.com/SumitKumarSoftwareEngineer/Codequest"
       },
       icon: MessageSquare,
@@ -122,9 +121,9 @@ const ProjectsSection = () => {
 
   const cardVariants = {
     hidden: { opacity: 0, y: 50, scale: 0.9 },
-    visible: { 
-      opacity: 1, 
-      y: 0, 
+    visible: {
+      opacity: 1,
+      y: 0,
       scale: 1,
       transition: {
         duration: 0.6,
@@ -136,7 +135,7 @@ const ProjectsSection = () => {
   return (
     <section id="projects" className="py-20 pt-4 pb-0 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-purple-900/10 to-purple-800/10" />
-      
+
       <div className="container mx-auto px-6 relative z-10">
         <motion.div
           ref={ref}
@@ -174,10 +173,10 @@ const ProjectsSection = () => {
                         alt={project.title}
                         className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
                       />
-                      
+
                       {/* Overlay */}
                       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
-                      
+
                       {/* Project Icon */}
                       <motion.div
                         className={`absolute top-3 right-3 p-2 bg-gradient-to-r ${project.gradient} rounded-lg shadow-lg`}
@@ -294,7 +293,7 @@ const ProjectsSection = () => {
 
           {/* Note */}
           <motion.div variants={cardVariants} className="text-center mt-4 pb-14">
-           
+
             <div
               className="mt-8 inline-flex items-center gap-3 px-5 py-2.5 bg-gradient-to-r from-purple-700/50 to-purple-600/50 rounded-full border border-purple-400/70 hover:bg-purple-600/60 hover:border-purple-400/80 transition-all duration-300 cursor-pointer shadow-lg shadow-purple-900/30"
               onClick={() => window.open('https://github.com/SumitKumarSoftwareEngineer', '_blank')}

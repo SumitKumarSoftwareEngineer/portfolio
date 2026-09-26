@@ -36,8 +36,8 @@ const HeroSection = () => {
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
-    visible: { 
-      opacity: 1, 
+    visible: {
+      opacity: 1,
       y: 0,
       transition: { duration: 0.5 }
     }
@@ -74,7 +74,7 @@ const HeroSection = () => {
     <section id="home" className="min-h-screen w-full flex items-center justify-center relative overflow-hidden">
       {/* Background Gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 to-black" />
-      
+
       {/* Animated Background Elements */}
       <div className="absolute inset-0">
         {[...Array(30)].map((_, i) => (
@@ -130,7 +130,6 @@ const HeroSection = () => {
                 texts={[
                   "Software Engineer",
                   "Full Stack Developer",
-                  "CS Final Year Student",
                   "Problem Solver",
                   "Code Enthusiast"
                 ]}
